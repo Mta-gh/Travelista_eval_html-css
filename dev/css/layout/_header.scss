@@ -1,0 +1,33 @@
+.header {
+    background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: $white;
+    a {
+        color: white;
+        
+    }
+    span {
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .head-txt {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100vh;
+        margin-top: -90px;
+    }
+    .btn {
+        margin-top: 1rem;
+    }
+}
+
+a:hover {
+    color: $yellow;
+    transition: all $transition;
+}

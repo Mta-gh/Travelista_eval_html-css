@@ -1,0 +1,50 @@
+body {
+    font-family: $font-family;
+    color: $black-txt;
+    font-size: 14px;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+// concernant le txt
+h1 {
+    font-size: 4.5em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 .5rem;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-transform: capitalize;
+}
+h3 {
+    font-size: 1.5em;
+    span {
+        font-weight: 300;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $black-txt;
+    &:hover {
+        color: $yellow;
+        transition: all $transition;
+    }
+}
+
+a:hover {
+    color: $yellow;
+    transition: all $transition;
+}
+
+p {
+    font-weight: 300;
+}
+

@@ -1,0 +1,9 @@
+.sect-popular {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    .title-sect {
+        grid-column: span 3;
+        text-align: center;
+    }
+}

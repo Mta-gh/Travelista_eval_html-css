@@ -1,0 +1,33 @@
+.head-nav {
+    display: flex;
+    flex-direction: column;
+    .top-nav, .main-nav {
+        display: flex;
+        align-items: center;
+    }
+    .top-nav {
+        justify-content: space-between;
+        padding: 10px 5px;
+        a {
+            font-weight: 300;
+        }
+    }
+    .left-nav a {
+        margin-right: 20px;
+    }
+    .right-nav a {
+        margin-left: 10px;
+    }
+    .main-nav {
+        background-color: rgba($color: $white, $alpha: .2);
+        padding: 15px;
+        a {
+            text-transform: uppercase;
+            margin-left: 20px;
+        }
+        a:nth-of-type(1) {
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+}

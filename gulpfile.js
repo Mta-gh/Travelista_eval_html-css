@@ -34,10 +34,6 @@ gulp.task('sassification', function() {
     }))
     // create source maps
     .pipe(sourcemaps.write('./maps'))
-    
-
-    
-    
     // destination of the file
     .pipe(gulp.dest('prod/css'));
 });
