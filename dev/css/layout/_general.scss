@@ -9,8 +9,19 @@ body {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 // concernant le txt
+
+h1, h2, h3,h4 {
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+
 h1 {
     font-size: 4.5em;
     text-transform: uppercase;
@@ -30,6 +41,10 @@ h3 {
     }
 }
 
+h4 {
+    font-size: 1.2em;
+}
+
 a {
     text-decoration: none;
     color: $black-txt;
@@ -46,5 +61,20 @@ a:hover {
 
 p {
     font-weight: 300;
+    line-height: 1.5em;
+    color: $foot-txt;
 }
 
+// concernant les forms/inputs
+button {
+    border: 0;
+}
+input {
+    background-color: rgba($color: white, $alpha: 0);
+    box-shadow: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    font-weight: 300;
+    padding: .7em;
+}

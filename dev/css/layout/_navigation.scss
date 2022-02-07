@@ -1,6 +1,8 @@
 .head-nav {
     display: flex;
     flex-direction: column;
+    z-index: 5;
+position: relative;
     .top-nav, .main-nav {
         display: flex;
         align-items: center;

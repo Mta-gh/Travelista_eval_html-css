@@ -1,0 +1,76 @@
+.footer {
+    background-color: $footerback;
+    h4 {
+        color: $white;
+        text-transform: uppercase;
+    }
+    p, a {
+        color: $foot-txt;
+        font-weight: 300;
+    }
+    a {
+        &:hover {
+            color: $yellow;
+            transition: all $transition;
+        }
+    }
+    .top-foot {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    // navigation
+    .foot-bloc:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: start;
+        h4 {
+            grid-column: span 2;
+        }
+        a {
+            margin-bottom: 1em;
+        }
+    }
+    .foot-links {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    // insta
+    .foot-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: calc(10px + .2em);
+    }
+    .foot-inputs {
+        display: flex; 
+        align-items: center;
+        button {
+            padding: 1em;
+        }
+        input {
+            border-color: $foot-txt;
+            color: $foot-txt;
+        }
+        .fa-paper-plane {
+            font-size: 1rem;
+        }
+    }
+    .bottom-foot {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5em;
+        padding-top: 1.5em;
+        border-top: 1px solid $foot-txt;
+        .foot-socials {
+            margin-left: auto;
+            a {
+                color: $white;
+                margin-left: 1em;
+            }
+        }
+        a, .fa-heart {
+            color: $yellow;
+        }
+    }
+}
