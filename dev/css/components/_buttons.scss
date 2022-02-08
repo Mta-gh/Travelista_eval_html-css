@@ -15,12 +15,14 @@
     background-color: #f9f9ff;
     color: $black-txt;
     padding: 10px 20px ;
-    border: 1px solid #eeeeee;
+    border: 1px solid $light-border;
     font-weight: 500;
     font-size: 1em;
+    text-transform: uppercase;
     &:hover {
         background-color: $yellow;
         color: $white;
+        border-color: #eeeeee00;
     }
 }
 

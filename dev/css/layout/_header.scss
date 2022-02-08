@@ -14,6 +14,11 @@
         position: absolute;
         z-index: 0;
     }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     a, p {
         color: white;
         
@@ -29,10 +34,9 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        top: 30vh;
-        z-index: 5;
-        position: relative;
-
+        z-index: 4;
+        flex-grow: 1;
+        margin-top: -50px;
     }
     .btn {
         margin-top: 1rem;

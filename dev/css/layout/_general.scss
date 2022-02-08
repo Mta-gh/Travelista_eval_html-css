@@ -69,7 +69,7 @@ p {
 button {
     border: 0;
 }
-input {
+input, textarea {
     background-color: rgba($color: white, $alpha: 0);
     box-shadow: none;
     border-width: 1px;
