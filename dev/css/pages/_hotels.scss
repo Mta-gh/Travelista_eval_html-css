@@ -1,0 +1,51 @@
+.hotel {
+    .header {
+        background-image: url(../img/hero-hotels.jpg);
+    }
+    .hotels-blocs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+        padding-bottom: 6em;
+    }
+    .article-packages {
+        padding: 0;
+        width: max-content;
+        h3 {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: .3em;
+        }
+        .map-review {
+            padding-bottom: .8em;
+            a {
+            color: $foot-txt;
+            font-weight: 300;
+            &:hover {
+                color: $yellow;
+            }
+            }
+            
+        }
+    }
+    .package-top {
+        display: flex;
+        justify-content: space-between;
+    }
+    .package-prices {
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $light-border;
+        margin-bottom: 0;
+        padding: .8em 0;
+    }
+    .package-txt {
+        padding: 2em;
+    }
+    .package-per-night {
+        border-bottom: 0;
+    }
+    .sect-request {
+        background-color: $white;
+    }
+}

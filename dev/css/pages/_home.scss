@@ -21,6 +21,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    p {
+        margin: 0;
+    }
+    h2 {
+        margin-bottom: .5em;
+    }
+    padding: 4em 0;
 }
 
 // 1st Section
@@ -84,27 +91,28 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    .article-packages {
-        background-color: $white;
-        height: fit-content;
-        padding: 2em;
-        h3 {
-            margin-top: 0;
-            text-align: center;
-            border-bottom: 1px solid $yellow;
-            padding-bottom: .8em;
-            margin-bottom: 1.2em;
-        }
-        p {
-            margin: 0;
-        }
+}
+
+.article-packages {
+    background-color: $white;
+    height: fit-content;
+    padding: 2em;
+    h3 {
+        margin-top: 0;
+        text-align: center;
+        border-bottom: 1px solid $yellow;
+        padding-bottom: .8em;
+        margin-bottom: 1.2em;
     }
-    .package-prices {
-        display: flex;
-        margin-bottom: .8em;
-        a {
-            margin-left: auto;
-        }
+    p {
+        margin: 0;
+    }
+}
+.package-prices {
+    display: flex;
+    margin-bottom: .8em;
+    a {
+        margin-left: auto;
     }
 }
 
@@ -163,12 +171,14 @@
     .testify-bloc:nth-of-type(2)::after {
         background-image: url(../img/c2.jpg);
     }
-    .fa-star {
-        color: $yellow;
-    }
-    .star-grey {
-        color: $foot-txt;
-    }
+    
+}
+
+.fa-star {
+    color: $yellow;
+}
+.star-grey {
+    color: $foot-txt;
 }
 
 // 5th Section
@@ -192,7 +202,14 @@
     height: fit-content;
     grid-template-rows: 1fr 2fr;
     .img-container {
-        padding-bottom: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        &:hover img {
+            transform: scale(1.1);
+        }
+        img {
+            transition: transform $transition;
+        }
     }
     .btn, .btn2 {
         font-size: .8em;

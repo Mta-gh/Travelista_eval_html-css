@@ -33,3 +33,54 @@ position: relative;
         }
     }
 }
+
+.elBurgerito {
+    display: none;
+    width: 30px;
+    height: 40px;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-left: 30px;
+    cursor: pointer;
+    .burger-line {
+        background: $white;
+        width: 90%;
+        height: 2px;
+        margin: 3px 0;
+        border-radius: 2px;
+        transition: all .4s ease-in-out;
+    }
+}
+
+// menu popup
+.burger-popup{
+    height: 100vh;
+    width: 30vw;
+    position: fixed;
+    left: 0;
+    background-color: #000000;
+    // left: -100%;
+    transition:all 0.5s ease-in-out;
+    z-index: 10;
+    .burger-nav {
+        display: flex;
+    flex-direction: column;
+    padding: 4em 2em;
+    gap: 2em;
+    }
+    a {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .elBurgerito {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+    }
+}
