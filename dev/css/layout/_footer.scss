@@ -17,6 +17,7 @@
     .top-foot {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
     }
     // navigation
     .foot-bloc:nth-of-type(2) {
@@ -49,7 +50,7 @@
             padding: 1em;
         }
         .foot-input {
-            border-color: $foot-txt;
+            border: 1px solid $foot-txt;
             color: $foot-txt;
             background-color: rgba($color: #000000, $alpha: 0);
         }
@@ -63,15 +64,31 @@
         margin-top: 1.5em;
         padding-top: 1.5em;
         border-top: 1px solid $foot-txt;
-        .foot-socials {
-            margin-left: auto;
-            a {
-                color: $white;
-                margin-left: 1em;
-            }
-        }
         a, .fa-heart {
             color: $yellow;
+        }
+    }
+    .foot-socials {
+        margin-left: auto;
+        a {
+            color: $white;
+            margin-left: 1em;
+        }
+        a:nth-of-type(1) {
+            margin-left: 0;
+        }
+    }
+    .top-foot, .bottom-foot {
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            .foot-socials {
+                margin-left: 0;
+                margin-right: auto;
+            }
+            .foot-input {
+                flex-grow: 1;
+            }
         }
     }
 }

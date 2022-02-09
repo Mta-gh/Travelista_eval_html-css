@@ -8,6 +8,10 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         padding-top: 60px;
+        @media screen and (max-width: 1170px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 
@@ -15,6 +19,7 @@
 .blog-content {
     display: flex;
     flex-direction: column;
+    
 }
 .article-content {
     display: grid;
@@ -315,6 +320,7 @@ input, textarea {
     .categories {
         display: flex;
         justify-content: space-between;
+        border-bottom: 3px dotted $light-border;
         p{
             transition: color $transition;
         }
@@ -370,5 +376,46 @@ input, textarea {
     text-transform: capitalize;
     &:hover {
         background-color: $yellow;
+    }
+}
+
+// Responsive
+    // Intermediate
+@media screen and (max-width: 1170px) {
+    .blog-content img {
+        width: 100%;
+    }
+    .blog-newsletter input {
+        flex-grow: 1;
+    }
+}
+
+    // Mobile
+@media screen and (max-width: 768px) {
+    .article-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .article-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        .categories, .socials {
+            grid-column: span 2;
+        }
+        .categories {
+            justify-content: flex-start;
+        }
+    }
+    .prev-next {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .post-comments .comment-reply {
+        display: flex;
+        flex-direction: column;
+    }
+    .blog-right img {
+        width: auto;
     }
 }

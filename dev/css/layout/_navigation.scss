@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     z-index: 5;
-position: relative;
+    position: relative;
     .top-nav, .main-nav {
         display: flex;
         align-items: center;
@@ -45,24 +45,28 @@ position: relative;
     cursor: pointer;
     .burger-line {
         background: $white;
-        width: 90%;
+        width: 30px;
         height: 2px;
         margin: 3px 0;
         border-radius: 2px;
-        transition: all .4s ease-in-out;
+        transition: all $transition;
+    }
+    .burger-line:nth-of-type(2) {
+        opacity: 1;
+        transition: opacity .2s ease-out;
+
     }
 }
 
-// menu popup
+// menu popup mobile
 .burger-popup{
     height: 100vh;
-    width: 30vw;
+    width: 40vw;
     position: fixed;
-    left: 0;
     background-color: #000000;
-    // left: -100%;
+    left: -100%;
     transition:all 0.5s ease-in-out;
-    z-index: 10;
+    z-index: 222;
     .burger-nav {
         display: flex;
     flex-direction: column;
@@ -76,6 +80,46 @@ position: relative;
     }
 }
 
+.active {
+    left: 0;
+    transition:all $transition;
+    .burger-line {
+        position: fixed;
+        width: 30px;
+    }
+    .burger-line:nth-of-type(1) {
+        transform: rotate(45deg);
+    }
+    .burger-line:nth-of-type(3) {
+        transform: rotate(-45deg);
+    }
+    .burger-line:nth-of-type(2) {
+        opacity: 0;
+        z-index: -50;
+    }
+}
+
+// Overlay 
+.overloff {
+    position: fixed;
+    transition:all $transition;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: -1;
+}
+
+.overlon {
+    background: #000000;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: all $transition;
+}
+
+
+// Responsive 
 @media screen and (max-width: 768px) {
     .elBurgerito {
         display: flex;
