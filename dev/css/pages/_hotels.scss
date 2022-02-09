@@ -2,6 +2,7 @@
     .header {
         background-image: url(../img/hero-hotels.jpg);
     }
+    // Grid pour layout des boites
     .hotels-blocs {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -13,7 +14,7 @@
         width: max-content;
         transition: box-shadow $transition;
         &:hover {
-            box-shadow: 0 7px 30px rgba($color: #000000, $alpha: .25);
+            box-shadow: 0 3px 30px rgba($color: #000000, $alpha: .25);
         }
         h3 {
             border-bottom: 0;
@@ -32,6 +33,7 @@
             
         }
     }
+    // Les boites de chaque hotel
     .package-top {
         display: flex;
         justify-content: space-between;
@@ -54,6 +56,9 @@
     }
     .btn{
         color: $black-txt;
+        &:hover {
+            color: $white;
+        }
     }
     .btn3 {
         color: $white

@@ -113,6 +113,7 @@
 }
 .package-prices {
     display: flex;
+    align-items: center;
     margin-bottom: .8em;
     a {
         margin-left: auto;
@@ -193,6 +194,9 @@
         justify-self: flex-end;
         align-items: flex-start;
         max-width: 60%;
+        p {
+            padding-bottom: 2em;
+        }
     }
     img {
         max-width: 50vw;
@@ -265,10 +269,14 @@
             align-items: center;
             gap: 2em;
             padding: 0;
+            p {
+                padding-bottom: 0;
+            }
         }
         img {
             width: 100%;
             max-width: 100%;
         }
+        
     }
 }

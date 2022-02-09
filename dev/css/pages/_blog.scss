@@ -15,12 +15,13 @@
     }
 }
 
-
+// La Partie gauche contenant l'article
 .blog-content {
     display: flex;
     flex-direction: column;
     
 }
+// l'article en lui même
 .article-content {
     display: grid;
     gap: 2em;
@@ -95,6 +96,7 @@
     }
 }
 
+// Les boutons prev et next article
 .prev-next {
     display: flex;
     justify-content: space-between;
@@ -187,7 +189,9 @@
     h4 {
         margin: 0;
     }
+    
 }
+// Poster son commentaire
 .post-comments {
     display: flex;
     flex-direction: column;
@@ -348,7 +352,8 @@ input, textarea {
     text-align: center;
     div {
         display: flex;
-        align-items: center;
+        justify-content: center;
+        
         #email {
             border: 1px solid $light-border;
         }
@@ -380,7 +385,7 @@ input, textarea {
 }
 
 // Responsive
-    // Intermediate
+// Intermediate
 @media screen and (max-width: 1170px) {
     .blog-content img {
         width: 100%;
@@ -388,10 +393,14 @@ input, textarea {
     .blog-newsletter input {
         flex-grow: 1;
     }
+    .blog-right {
+        margin-left: 0;
+    }
 }
 
-    // Mobile
+// Mobile
 @media screen and (max-width: 768px) {
+    // Tout flexer
     .article-content {
         display: flex;
         flex-direction: column;
@@ -417,5 +426,23 @@ input, textarea {
     }
     .blog-right img {
         width: auto;
+    }
+    // Details des comms pour les rendre un peu mieux en mobile
+    .comment-txt h4 {
+        font-size: 1em;
+    }
+    .comments {
+        .one-comment {
+            padding-left: 45px;
+        gap: 1em;
+
+            &::before {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        .one-reply {
+            padding-left: 65px;
+        }
     }
 }

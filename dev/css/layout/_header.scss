@@ -28,6 +28,7 @@
         text-transform: uppercase;
         font-weight: 300;
     }
+    // Le titre
     .head-txt {
         width: 50%;
         display: flex;
@@ -37,6 +38,12 @@
         z-index: 4;
         flex-grow: 1;
         margin-top: -50px;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            h1 {
+                font-size: 3em;
+            }
+        }
     }
     .btn {
         margin-top: 1rem;
@@ -61,6 +68,7 @@ a:hover {
     .head-txt {
         width: 100%;
         align-items: center;
+        text-align: center;
         h1 {
             text-transform: capitalize;
         }
